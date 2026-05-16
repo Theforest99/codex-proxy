@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: codex-proxy
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
