@@ -1,4 +1,6 @@
-Deno.serve(async (req: Request) => {
+const port = parseInt(Deno.env.get("PORT") || "8000");
+
+Deno.serve({ port }, async (req: Request) => {
   const url = new URL(req.url);
   const targetUrl = new URL(url.pathname + url.search, "https://api.openai.com");
 
